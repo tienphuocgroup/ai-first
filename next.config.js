@@ -1,7 +1,10 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  output: 'export',
+  trailingSlash: true,
+  basePath: process.env.NODE_ENV === 'production' ? '/ai-first' : '',
   images: {
-    domains: [],
+    unoptimized: true,
   },
   typescript: {
     ignoreBuildErrors: false,
