@@ -1,0 +1,68 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    font-feature-settings: "rlig" 1, "calt" 1;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-playfair);
+    font-weight: 600;
+    line-height: 1.2;
+  }
+}
+
+@layer components {
+  .section-container {
+    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+  }
+  
+  .card-executive {
+    @apply bg-white rounded-xl shadow-lg border border-slate-200 p-6 hover:shadow-xl transition-all duration-300;
+  }
+  
+  .btn-primary {
+    @apply bg-vietnam-red hover:bg-red-700 text-white px-6 py-3 rounded-lg font-semibold transition-all duration-200 hover:shadow-lg;
+  }
+  
+  .btn-secondary {
+    @apply bg-vietnam-gold hover:bg-yellow-500 text-executive-dark px-6 py-3 rounded-lg font-semibold transition-all duration-200 hover:shadow-lg;
+  }
+  
+  .text-gradient {
+    @apply bg-gradient-to-r from-vietnam-red to-vietnam-gold bg-clip-text text-transparent;
+  }
+  
+  .nav-link {
+    @apply text-executive-medium hover:text-vietnam-red transition-colors duration-200 font-medium;
+  }
+  
+  .statistic-card {
+    @apply bg-gradient-to-br from-white to-blue-50 rounded-lg p-6 shadow-md border border-blue-100;
+  }
+  
+  .chart-container {
+    @apply bg-white rounded-lg p-6 shadow-lg border border-slate-200;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+  
+  .scrollbar-hide {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+  
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;
+  }
+}
