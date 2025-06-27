@@ -44,7 +44,7 @@ export default function HeroSection() {
   return (
     <section id="overview" className="relative min-h-screen flex items-center justify-center overflow-hidden">
       {/* Background with gradient */}
-      <div className="absolute inset-0 bg-gradient-to-br from-slate-900 via-blue-900 to-slate-800" />
+      <div className="absolute inset-0 bg-gradient-to-br from-executive-charcoal via-executive-graphite to-executive-pewter" />
       
       {/* Background pattern */}
       <div className="absolute inset-0 opacity-10">
@@ -68,19 +68,19 @@ export default function HeroSection() {
                 AI-First
               </span>
             </h1>
-            <p className="text-xl md:text-2xl text-blue-100 mb-4 font-light">
+            <p className="text-xl md:text-2xl text-executive-platinum mb-4 font-light">
               Tái Cấu trúc Tổ chức và Nguồn lực cho Doanh nghiệp Việt
             </p>
-            <p className="text-lg text-blue-200 max-w-3xl mx-auto">
-              Chiến lược thực tiễn giúp CEO và lãnh đạo doanh nghiệp Việt Nam
-              chuyển đổi sang mô hình AI-First để tạo lợi thế cạnh tranh bền vững
+            <p className="text-lg text-executive-platinum max-w-3xl mx-auto">
+              Từ case study thực tế của TPG đến framework chiến lược cho CEO và lãnh đạo 
+              doanh nghiệp Việt Nam chuyển đổi AI-First
             </p>
           </motion.div>
 
           {/* Key Statistics Dashboard */}
           <motion.div variants={itemVariants} className="mb-12">
             <h2 className="text-2xl font-semibold text-white mb-8">
-              Tình hình AI tại Việt Nam
+              Số Liệu Quan Trọng cho Lãnh Đạo
             </h2>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
               {keyStatistics.map((stat) => {

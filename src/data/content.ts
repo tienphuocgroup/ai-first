@@ -3,45 +3,45 @@ import { ContentSection, Statistic, ComparisonRow, Sector, CEOQuestion } from '@
 export const keyStatistics: Statistic[] = [
   {
     id: 'ai-productivity-gain',
-    label: 'Tăng năng suất',
+    label: 'Tăng năng suất AI',
     value: '20-50%',
-    description: 'Trợ lý lập trình AI giúp lập trình viên hoàn thành tác vụ nhanh hơn',
+    description: 'Cải thiện năng suất lập trình với AI Assistants',
     trend: 'up'
   },
   {
-    id: 'vietnam-ai-engineers-need',
-    label: 'Nhu cầu kỹ sư AI',
-    value: '50,000',
-    description: 'Số kỹ sư AI cần đến năm 2025',
+    id: 'tpg-cost-elimination',
+    label: 'Tiết kiệm chi phí',
+    value: '150M→0',
+    description: 'Dự án website từ 150 triệu thành 0 đồng chi phí',
     trend: 'up'
   },
   {
-    id: 'current-ai-graduates',
-    label: 'Sinh viên AI tốt nghiệp/năm',
-    value: '5,000-7,000',
-    description: 'Hiện tại chỉ đào tạo được mỗi năm',
-    trend: 'stable'
-  },
-  {
-    id: 'skill-gap',
-    label: 'Thiếu kỹ năng thực tế',
-    value: '60%',
-    description: 'Nhà tuyển dụng cho rằng sinh viên thiếu kỹ năng AI thực tế',
-    trend: 'down'
+    id: 'decision-speed',
+    label: 'Tăng tốc quyết định',
+    value: '95%',
+    description: 'Từ 2-3 ngày xuống 30 phút với AI insights',
+    trend: 'up'
   },
   {
     id: 'vietnam-leaders-ai-hiring',
-    label: 'Lãnh đạo VN muốn tuyển AI',
+    label: 'Lãnh đạo VN ưu tiên AI',
     value: '91%',
-    description: 'Vượt mức trung bình toàn cầu',
+    description: 'Vượt mức trung bình toàn cầu trong tuyển dụng AI',
     trend: 'up'
   },
   {
-    id: 'manufacturing-gdp-target',
-    label: 'Mục tiêu GDP sản xuất',
-    value: '30%',
-    description: 'Khát vọng đóng góp vào GDP của ngành sản xuất',
+    id: 'ai-agent-automation',
+    label: 'Tự động hóa với AI Agent',
+    value: '80-90%',
+    description: 'Cải thiện hiệu quả tạo mã cơ sở dữ liệu',
     trend: 'up'
+  },
+  {
+    id: 'ceo-ai-readiness',
+    label: 'CEO sẵn sàng AI',
+    value: '32%',
+    description: 'Chỉ 32% nhà lãnh đạo tự tin triển khai AI',
+    trend: 'down'
   }
 ]
 
@@ -363,14 +363,9 @@ export const navigationItems = [
     ]
   },
   {
-    id: 'roadmap',
-    title: 'Lộ trình ứng dụng',
-    href: '#roadmap',
-    children: [
-      { id: 'manufacturing', title: 'Sản xuất', href: '#manufacturing' },
-      { id: 'agriculture', title: 'Nông nghiệp', href: '#agriculture' },
-      { id: 'banking', title: 'Ngân hàng', href: '#banking' }
-    ]
+    id: 'tpg-case-study',
+    title: 'Case Study TPG',
+    href: '#tpg-case-study'
   },
   {
     id: 'human-capital',

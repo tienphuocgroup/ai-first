@@ -41,10 +41,10 @@ export default function CEOMandateSection() {
   }
 
   const getScoreLevel = (percentage: number) => {
-    if (percentage >= 80) return { level: 'Xuất sắc', color: 'text-green-600', bgColor: 'bg-green-50', borderColor: 'border-green-200' }
-    if (percentage >= 60) return { level: 'Tốt', color: 'text-blue-600', bgColor: 'bg-blue-50', borderColor: 'border-blue-200' }
-    if (percentage >= 40) return { level: 'Trung bình', color: 'text-yellow-600', bgColor: 'bg-yellow-50', borderColor: 'border-yellow-200' }
-    return { level: 'Cần cải thiện', color: 'text-red-600', bgColor: 'bg-red-50', borderColor: 'border-red-200' }
+    if (percentage >= 80) return { level: 'Xuất sắc', color: 'text-executive-emerald', bgColor: 'bg-emerald-50', borderColor: 'border-executive-emerald' }
+    if (percentage >= 60) return { level: 'Tốt', color: 'text-executive-navy', bgColor: 'bg-blue-50', borderColor: 'border-executive-navy' }
+    if (percentage >= 40) return { level: 'Trung bình', color: 'text-executive-amber', bgColor: 'bg-amber-50', borderColor: 'border-executive-amber' }
+    return { level: 'Cần cải thiện', color: 'text-executive-crimson', bgColor: 'bg-red-50', borderColor: 'border-executive-crimson' }
   }
 
   const nextQuestion = () => {
@@ -74,7 +74,7 @@ export default function CEOMandateSection() {
       const scoreLevel = getScoreLevel(score.percentage)
 
       return (
-        <section id="ceo-mandate" className="py-20 bg-slate-50">
+        <section id="ceo-mandate" className="py-20 bg-executive-mist">
           <div className="section-container">
             <motion.div
               initial={{ opacity: 0, scale: 0.9 }}

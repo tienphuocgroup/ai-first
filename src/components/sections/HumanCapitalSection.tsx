@@ -6,7 +6,7 @@ import { SkillGapChart, TalentReadinessChart } from '@/components/charts/SkillGa
 
 export default function HumanCapitalSection() {
   return (
-    <section id="human-capital" className="py-20 bg-white">
+    <section id="human-capital" className="py-20 bg-gradient-to-br from-white via-executive-cloud to-executive-mist">
       <div className="section-container">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -15,11 +15,11 @@ export default function HumanCapitalSection() {
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
-          <h2 className="text-4xl md:text-5xl font-bold text-executive-dark mb-6">
+          <h2 className="text-4xl md:text-5xl font-bold text-executive-charcoal mb-6">
             Mệnh lệnh về{' '}
             <span className="text-gradient">Vốn con người</span>
           </h2>
-          <p className="text-xl text-executive-medium max-w-4xl mx-auto leading-relaxed">
+          <p className="text-xl text-executive-pewter max-w-4xl mx-auto leading-relaxed">
             Điều hướng Nghịch lý Nhân tài Việt Nam trong kỷ nguyên AI
           </p>
         </motion.div>

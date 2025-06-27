@@ -28,8 +28,26 @@ module.exports = {
           cream: '#fefce8',
         },
         executive: {
+          // Deep, authoritative base colors
+          charcoal: '#1a1a1a',      // Primary dark
+          graphite: '#2d3748',      // Secondary dark  
+          pewter: '#4a5568',        // Medium gray
+          platinum: '#718096',      // Light gray
+          
+          // Sophisticated accent colors
+          navy: '#1e3a8a',          // Professional blue
+          emerald: '#047857',       // Success/growth green
+          amber: '#b45309',         // Warning/attention
+          crimson: '#991b1b',       // Critical/urgent
+          
+          // Neutral backgrounds
+          cloud: '#f7fafc',         // Light background
+          mist: '#edf2f7',          // Card backgrounds
+          steel: '#e2e8f0',         // Borders/dividers
+          
+          // Legacy colors for transition
           dark: '#0f172a',
-          medium: '#334155',
+          medium: '#334155', 
           light: '#cbd5e1',
           accent: '#f1c40f',
         }

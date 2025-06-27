@@ -53,8 +53,8 @@ export default function Navigation() {
       className={cn(
         'fixed top-0 left-0 right-0 z-50 transition-all duration-300',
         scrolled
-          ? 'bg-white/95 backdrop-blur-md shadow-lg border-b border-slate-200'
-          : 'bg-black/40 backdrop-blur-sm'
+          ? 'bg-executive-cloud/95 backdrop-blur-md shadow-lg border-b border-executive-steel'
+          : 'bg-executive-charcoal/40 backdrop-blur-sm'
       )}
     >
       <nav className="section-container">
@@ -65,19 +65,19 @@ export default function Navigation() {
             animate={{ opacity: 1 }}
             className="flex items-center space-x-3"
           >
-            <div className="w-10 h-10 bg-gradient-to-r from-red-600 to-yellow-500 rounded-lg flex items-center justify-center">
+            <div className="w-10 h-10 bg-gradient-to-r from-executive-navy to-executive-emerald rounded-lg flex items-center justify-center">
               <span className="text-white font-bold text-lg">AI</span>
             </div>
             <div>
               <h1 className={cn(
                 "text-xl font-bold transition-colors duration-300",
-                scrolled ? "text-slate-800" : "text-white"
+                scrolled ? "text-executive-charcoal" : "text-white"
               )}>
                 AI-First Vietnam
               </h1>
               <p className={cn(
                 "text-sm transition-colors duration-300",
-                scrolled ? "text-slate-600" : "text-gray-200"
+                scrolled ? "text-executive-pewter" : "text-executive-platinum"
               )}>
                 Chiến lược cho Doanh nghiệp
               </p>
