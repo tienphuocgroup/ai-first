@@ -89,27 +89,27 @@ export default function HeroSection() {
                   <motion.div
                     key={stat.id}
                     variants={itemVariants}
-                    className="statistic-card bg-white/10 backdrop-blur-md border border-white/20 text-white hover:bg-white/20 transition-all duration-300"
+                    className="statistic-card bg-white/95 backdrop-blur-md border border-white/30 shadow-xl hover:bg-white hover:shadow-2xl transition-all duration-300"
                   >
                     <div className="flex items-start justify-between mb-3">
-                      <IconComponent className="w-8 h-8 text-vietnam-gold" />
+                      <IconComponent className="w-8 h-8 text-vietnam-red" />
                       {stat.trend && (
                         <div className={`px-2 py-1 rounded-full text-xs font-medium ${
-                          stat.trend === 'up' ? 'bg-green-500/20 text-green-300' :
-                          stat.trend === 'down' ? 'bg-red-500/20 text-red-300' :
-                          'bg-blue-500/20 text-blue-300'
+                          stat.trend === 'up' ? 'bg-green-100 text-green-700' :
+                          stat.trend === 'down' ? 'bg-red-100 text-red-700' :
+                          'bg-blue-100 text-blue-700'
                         }`}>
                           {stat.trend === 'up' ? '↗' : stat.trend === 'down' ? '↘' : '→'}
                         </div>
                       )}
                     </div>
-                    <div className="text-3xl font-bold text-vietnam-gold mb-2">
+                    <div className="text-3xl font-bold text-vietnam-red mb-2">
                       {typeof stat.value === 'number' ? formatNumber(stat.value) : stat.value}
                     </div>
-                    <div className="text-sm font-medium text-blue-100 mb-2">
+                    <div className="text-sm font-bold text-slate-700 mb-2">
                       {stat.label}
                     </div>
-                    <div className="text-xs text-blue-200 leading-relaxed">
+                    <div className="text-xs text-slate-600 leading-relaxed">
                       {stat.description}
                     </div>
                   </motion.div>
