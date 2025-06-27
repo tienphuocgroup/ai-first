@@ -92,7 +92,7 @@ export default function HeroSection() {
                     className="statistic-card bg-white/95 backdrop-blur-md border border-white/30 shadow-xl hover:bg-white hover:shadow-2xl transition-all duration-300"
                   >
                     <div className="flex items-start justify-between mb-3">
-                      <IconComponent className="w-8 h-8 text-vietnam-red" />
+                      <IconComponent className="w-8 h-8 text-red-600" />
                       {stat.trend && (
                         <div className={`px-2 py-1 rounded-full text-xs font-medium ${
                           stat.trend === 'up' ? 'bg-green-100 text-green-700' :
@@ -103,7 +103,7 @@ export default function HeroSection() {
                         </div>
                       )}
                     </div>
-                    <div className="text-3xl font-bold text-vietnam-red mb-2">
+                    <div className="text-3xl font-bold text-red-600 mb-2">
                       {typeof stat.value === 'number' ? formatNumber(stat.value) : stat.value}
                     </div>
                     <div className="text-sm font-bold text-slate-700 mb-2">
@@ -122,11 +122,11 @@ export default function HeroSection() {
           <motion.div variants={itemVariants} className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
             <button
               onClick={scrollToNextSection}
-              className="bg-vietnam-red hover:bg-red-700 text-white px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-200 hover:shadow-xl transform hover:-translate-y-1"
+              className="bg-red-600 hover:bg-red-700 text-white px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-200 hover:shadow-xl transform hover:-translate-y-1"
             >
               Khám phá Chiến lược
             </button>
-            <button className="bg-transparent border-2 border-vietnam-gold text-vietnam-gold hover:bg-vietnam-gold hover:text-executive-dark px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-200">
+            <button className="bg-transparent border-2 border-yellow-500 text-yellow-500 hover:bg-yellow-500 hover:text-slate-800 px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-200">
               Tải Báo cáo PDF
             </button>
           </motion.div>

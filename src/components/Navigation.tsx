@@ -65,19 +65,19 @@ export default function Navigation() {
             animate={{ opacity: 1 }}
             className="flex items-center space-x-3"
           >
-            <div className="w-10 h-10 bg-gradient-to-r from-vietnam-red to-vietnam-gold rounded-lg flex items-center justify-center">
+            <div className="w-10 h-10 bg-gradient-to-r from-red-600 to-yellow-500 rounded-lg flex items-center justify-center">
               <span className="text-white font-bold text-lg">AI</span>
             </div>
             <div>
               <h1 className={cn(
                 "text-xl font-bold transition-colors duration-300",
-                scrolled ? "text-executive-dark" : "text-white"
+                scrolled ? "text-slate-800" : "text-white"
               )}>
                 AI-First Vietnam
               </h1>
               <p className={cn(
                 "text-sm transition-colors duration-300",
-                scrolled ? "text-executive-medium" : "text-gray-200"
+                scrolled ? "text-slate-600" : "text-gray-200"
               )}>
                 Chiến lược cho Doanh nghiệp
               </p>
@@ -93,9 +93,9 @@ export default function Navigation() {
                   className={cn(
                     'transition-colors duration-300 font-medium',
                     scrolled 
-                      ? 'text-executive-medium hover:text-vietnam-red' 
-                      : 'text-white hover:text-vietnam-gold',
-                    activeSection === item.id && (scrolled ? 'text-vietnam-red' : 'text-vietnam-gold')
+                      ? 'text-slate-600 hover:text-red-600' 
+                      : 'text-white hover:text-yellow-400',
+                    activeSection === item.id && (scrolled ? 'text-red-600' : 'text-yellow-400')
                   )}
                 >
                   {item.title}
@@ -111,7 +111,7 @@ export default function Navigation() {
                         <button
                           key={child.id}
                           onClick={() => scrollToSection(child.href)}
-                          className="block w-full text-left px-4 py-2 text-sm text-executive-medium hover:text-vietnam-red hover:bg-slate-50 transition-colors"
+                          className="block w-full text-left px-4 py-2 text-sm text-slate-600 hover:text-red-600 hover:bg-slate-50 transition-colors"
                         >
                           {child.title}
                         </button>
@@ -133,7 +133,7 @@ export default function Navigation() {
             className={cn(
               "lg:hidden p-2 rounded-lg transition-colors",
               scrolled 
-                ? "text-executive-dark hover:bg-slate-100" 
+                ? "text-slate-800 hover:bg-slate-100" 
                 : "text-white hover:bg-white/20"
             )}
           >
@@ -162,9 +162,9 @@ export default function Navigation() {
                     className={cn(
                       'block w-full text-left py-2 px-4 rounded-lg transition-colors font-medium',
                       scrolled || isOpen
-                        ? 'text-executive-medium hover:text-vietnam-red'
-                        : 'text-white hover:text-vietnam-gold',
-                      activeSection === item.id && 'text-vietnam-red bg-red-50'
+                        ? 'text-slate-600 hover:text-red-600'
+                        : 'text-white hover:text-yellow-400',
+                      activeSection === item.id && 'text-red-600 bg-red-50'
                     )}
                   >
                     {item.title}
@@ -178,8 +178,8 @@ export default function Navigation() {
                           className={cn(
                             "block w-full text-left py-1 px-4 text-sm transition-colors",
                             scrolled || isOpen
-                              ? "text-executive-medium hover:text-vietnam-red"
-                              : "text-gray-200 hover:text-vietnam-gold"
+                              ? "text-slate-600 hover:text-red-600"
+                              : "text-gray-200 hover:text-yellow-400"
                           )}
                         >
                           {child.title}

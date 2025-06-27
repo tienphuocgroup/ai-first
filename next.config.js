@@ -1,10 +1,15 @@
 /** @type {import('next').NextConfig} */
+const isGitHubPages = process.env.GITHUB_ACTIONS === 'true'
+
 const nextConfig = {
-  output: 'export',
-  trailingSlash: true,
-  basePath: process.env.NODE_ENV === 'production' ? '/ai-first' : '',
+  // Only use static export for GitHub Pages
+  ...(isGitHubPages && { 
+    output: 'export',
+    trailingSlash: true,
+    basePath: '/ai-first'
+  }),
   images: {
-    unoptimized: true,
+    unoptimized: isGitHubPages,
   },
   typescript: {
     ignoreBuildErrors: false,
