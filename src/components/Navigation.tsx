@@ -54,7 +54,7 @@ export default function Navigation() {
         'fixed top-0 left-0 right-0 z-50 transition-all duration-300',
         scrolled
           ? 'bg-white/95 backdrop-blur-md shadow-lg border-b border-slate-200'
-          : 'bg-transparent'
+          : 'bg-black/40 backdrop-blur-sm'
       )}
     >
       <nav className="section-container">
@@ -69,10 +69,16 @@ export default function Navigation() {
               <span className="text-white font-bold text-lg">AI</span>
             </div>
             <div>
-              <h1 className="text-xl font-bold text-executive-dark">
+              <h1 className={cn(
+                "text-xl font-bold transition-colors duration-300",
+                scrolled ? "text-executive-dark" : "text-white"
+              )}>
                 AI-First Vietnam
               </h1>
-              <p className="text-sm text-executive-medium">
+              <p className={cn(
+                "text-sm transition-colors duration-300",
+                scrolled ? "text-executive-medium" : "text-gray-200"
+              )}>
                 Chiến lược cho Doanh nghiệp
               </p>
             </div>
@@ -85,8 +91,11 @@ export default function Navigation() {
                 <button
                   onClick={() => scrollToSection(item.href)}
                   className={cn(
-                    'nav-link',
-                    activeSection === item.id && 'text-vietnam-red'
+                    'transition-colors duration-300 font-medium',
+                    scrolled 
+                      ? 'text-executive-medium hover:text-vietnam-red' 
+                      : 'text-white hover:text-vietnam-gold',
+                    activeSection === item.id && (scrolled ? 'text-vietnam-red' : 'text-vietnam-gold')
                   )}
                 >
                   {item.title}
@@ -121,7 +130,12 @@ export default function Navigation() {
           {/* Mobile Menu Button */}
           <button
             onClick={() => setIsOpen(!isOpen)}
-            className="lg:hidden p-2 rounded-lg text-executive-dark hover:bg-slate-100 transition-colors"
+            className={cn(
+              "lg:hidden p-2 rounded-lg transition-colors",
+              scrolled 
+                ? "text-executive-dark hover:bg-slate-100" 
+                : "text-white hover:bg-white/20"
+            )}
           >
             {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
           </button>
@@ -133,7 +147,12 @@ export default function Navigation() {
             initial={{ opacity: 0, height: 0 }}
             animate={{ opacity: 1, height: 'auto' }}
             exit={{ opacity: 0, height: 0 }}
-            className="lg:hidden border-t border-slate-200 py-4"
+            className={cn(
+              "lg:hidden py-4 border-t",
+              scrolled 
+                ? "border-slate-200 bg-white/95" 
+                : "border-white/20 bg-black/60"
+            )}
           >
             <div className="space-y-4">
               {navigationItems.map((item) => (
@@ -141,7 +160,10 @@ export default function Navigation() {
                   <button
                     onClick={() => scrollToSection(item.href)}
                     className={cn(
-                      'block w-full text-left py-2 px-4 rounded-lg nav-link',
+                      'block w-full text-left py-2 px-4 rounded-lg transition-colors font-medium',
+                      scrolled || isOpen
+                        ? 'text-executive-medium hover:text-vietnam-red'
+                        : 'text-white hover:text-vietnam-gold',
                       activeSection === item.id && 'text-vietnam-red bg-red-50'
                     )}
                   >
@@ -153,7 +175,12 @@ export default function Navigation() {
                         <button
                           key={child.id}
                           onClick={() => scrollToSection(child.href)}
-                          className="block w-full text-left py-1 px-4 text-sm text-executive-medium hover:text-vietnam-red transition-colors"
+                          className={cn(
+                            "block w-full text-left py-1 px-4 text-sm transition-colors",
+                            scrolled || isOpen
+                              ? "text-executive-medium hover:text-vietnam-red"
+                              : "text-gray-200 hover:text-vietnam-gold"
+                          )}
                         >
                           {child.title}
                         </button>
