@@ -13,10 +13,10 @@ const playfair = Playfair_Display({
 })
 
 export const metadata: Metadata = {
-  title: 'Mô hình Vận hành AI-First - Chiến lược cho Doanh nghiệp Việt',
-  description: 'Tái cấu trúc tổ chức và nguồn lực cho doanh nghiệp Việt Nam trong kỷ nguyên AI',
-  keywords: 'AI-First, Vietnam, doanh nghiệp, chuyển đổi số, CEO, chiến lược',
-  authors: [{ name: 'AI Strategy Vietnam' }],
+  title: 'AI-First Engineering - For People Who Actually Ship Software',
+  description: 'Who gets replaced, who gets amplified — and why I don\'t hire traditional junior developers anymore',
+  keywords: 'AI-First, Engineering, Software Development, AI, Automation, Junior Developers',
+  authors: [{ name: 'AI-First Engineering' }],
 }
 
 export const viewport = {
@@ -30,8 +30,8 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="vi" className={`${inter.variable} ${playfair.variable}`}>
-      <body className={`${inter.className} antialiased bg-slate-50 text-executive-dark`}>
+    <html lang="en" className={`${inter.variable} ${playfair.variable}`}>
+      <body className={`${inter.className} antialiased`}>
         {children}
       </body>
     </html>
